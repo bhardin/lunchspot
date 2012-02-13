@@ -1,3 +1,5 @@
+<% if current_user %>
+
 <% title "Restaurants" %>
 <table class="table table-striped">
   <tr>
@@ -66,5 +68,7 @@
 <%= recommendation.name %><br/>
 <% end %>
 
-
+<% else %>
+Please log in.
+<% end %>
 
