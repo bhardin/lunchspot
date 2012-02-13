@@ -1,11 +1,6 @@
-<% title "Restaurant" %>
+<% title @restaurant.name %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
-<p>
-  <strong>Address:</strong>
+<i class="icon-home"></i>Address
   <%= @restaurant.address %>
 </p>
 <p>
@@ -18,7 +13,8 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Destroy", @restaurant, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", restaurants_path %>
+	
+  <%= link_to "Edit", edit_restaurant_path(@restaurant), :class => 'btn' %>
+  <%= link_to "Destroy", @restaurant, :confirm => 'Are you sure?', :method => :delete, :class => 'btn' %>
+  <%= link_to "View All", restaurants_path, :class => 'btn' %>
 </p>
