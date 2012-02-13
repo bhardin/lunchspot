@@ -10,14 +10,29 @@
   <% for restaurant in @restaurants %>
     <tr>
 			<td>
-			<%= link_to restaurant_path(restaurant) + "?rating=like", :remote => true, :class => 'btn'  do%>
-				<i class="icon-heart"></i> Like
-			<% end %>
+				<% if current_user.likes? restaurant %>
+					<%= link_to restaurant_path(restaurant) + "?rating=like", :remote => true, :class => 'btn btn-primary'  do%>
+						<i class="icon-heart icon-white"></i> Like	
+					<% end %>
+				<% else %>
+					<%= link_to restaurant_path(restaurant) + "?rating=like", :remote => true, :class => 'btn'  do%>
+						<i class="icon-heart"></i> Like	
+					<% end %>
+				<% end %>			
 			</td>
 			<td>
-			<%= link_to restaurant_path(restaurant) + "?rating=dislike", :remote => true, :class => "btn" do %>
-				<i class="icon-ban-circle"></i> Hate
-			<% end %>
+				
+				
+				<% if current_user.dislikes? restaurant %>
+					<%= link_to restaurant_path(restaurant) + "?rating=dislike", :remote => true, :class => 'btn btn-danger'  do%>
+						<i class="icon-ban-circle icon-white"></i> dislike	
+					<% end %>
+				<% else %>
+					<%= link_to restaurant_path(restaurant) + "?rating=dislike", :remote => true, :class => 'btn'  do%>
+						<i class="icon-ban-circle"></i> dislike	
+					<% end %>
+				<% end %>
+
 			</td>
       <td><%= link_to restaurant.name, restaurant %></td>
       <td><%= restaurant.address %></td>
