@@ -19,10 +19,8 @@ Currently only github, but look at omniauth on how to add additional authenticat
 Register an application on github or other places you want to do oauth.
 [Github](https://github.com/account/applications)
 
-Create variables. We host ours on heroku, do the following
+After creating your application on github, you will need to configure heroku to use those variables. Issue the following commands:
 
-ENV['GITHUB_ID']
-
+		heroku config:add GITHUB_ID=XXXXXXXXXXX
 and
-
-ENV['GITHUB_SECRET']
+		heroku config:add GITHUB_SECRET=XXXXXXXXXXX
