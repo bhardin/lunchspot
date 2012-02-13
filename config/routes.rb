@@ -1,4 +1,6 @@
 Lunchspot::Application.routes.draw do
+
+  match "/random" => "restaurants#random", :as => :random
   resources :restaurants
 
   root :to => "restaurants#index"

@@ -46,4 +46,9 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
     redirect_to restaurants_url, :notice => "Successfully destroyed restaurant."
   end
+  
+  def random
+    r_id = Random.new.rand(1..Restaurant.count)
+    redirect_to restaurant_path(r_id)
+  end
 end
