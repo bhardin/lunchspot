@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120213063406) do
     t.integer  "user_id"
     t.integer  "dislikeable_id"
     t.string   "dislikeable_type"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "dislikes", ["dislikeable_id"], :name => "index_dislikes_on_dislikeable_id"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20120213063406) do
     t.integer  "user_id"
     t.integer  "ignoreable_id"
     t.string   "ignoreable_type"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "ignores", ["ignoreable_id"], :name => "index_ignores_on_ignoreable_id"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20120213063406) do
     t.integer  "user_id"
     t.integer  "likeable_id"
     t.string   "likeable_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "likes", ["likeable_id"], :name => "index_likes_on_likeable_id"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(:version => 20120213063406) do
     t.integer  "user_id"
     t.integer  "stashable_id"
     t.string   "stashable_type"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "stashed_items", ["stashable_id"], :name => "index_stashed_items_on_stashable_id"
