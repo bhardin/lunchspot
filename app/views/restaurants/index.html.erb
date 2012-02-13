@@ -1,0 +1,21 @@
+<% title "Restaurants" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+  </tr>
+  <% for restaurant in @restaurants %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.address %></td>
+      <td><%= restaurant.phone %></td>
+      <td><%= link_to "Show", restaurant %></td>
+      <td><%= link_to "Edit", edit_restaurant_path(restaurant) %></td>
+      <td><%= link_to "Destroy", restaurant, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Restaurant", new_restaurant_path %></p>

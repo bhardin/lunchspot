@@ -4,6 +4,7 @@ gem 'rails', '3.2.0'
 gem 'sqlite3'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'less-rails-bootstrap'
 
 group :development do
 	gem 'nifty-generators'
@@ -38,3 +39,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "mocha", :group => :test

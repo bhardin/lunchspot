@@ -8,7 +8,22 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
+	
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+						<a class="brand" href="#">LunchSpot</a>
+						<div class="nav-collapse">
+							<ul class="nav">
+								<li class="active"><a href="<%= restaurants_path %>">Restaurants</a></li>
+								<li><a href="#">Sign-In</a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+    <div class="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
