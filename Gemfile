@@ -6,13 +6,17 @@ gem 'omniauth-github'
 gem 'less-rails-bootstrap'
 gem "recommendable"
 
-group :development do
+group :development, :test do
 	gem 'sqlite3'
-	gem 'nifty-generators'
 end
 
 group :production do
 	gem 'pg'
+	gem 'thin'
+end
+
+group :development do
+	gem 'nifty-generators'
 end
 
 
