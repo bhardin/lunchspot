@@ -10,6 +10,7 @@ By default uses github for authentication. You can easily add twitter, facebook,
 * Setup on Heroku, add a RedisToGo Instance.
 * Create a [Github application](https://github.com/account/applications)
 * Add Keys to heroku
+
 ```
 heroku config:add GITHUB_ID=XXXXXXXXXXX
 heroku config:add GITHUB_SECRET=XXXXXXXXXXX
