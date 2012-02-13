@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'less-rails-bootstrap'
+gem "recommendable"
 
 group :development do
 	gem 'nifty-generators'
