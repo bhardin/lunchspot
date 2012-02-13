@@ -21,6 +21,19 @@ Register an application on github or other places you want to do oauth.
 
 After creating your application on github, you will need to configure heroku to use those variables. Issue the following commands:
 
-		heroku config:add GITHUB_ID=XXXXXXXXXXX
-and
-		heroku config:add GITHUB_SECRET=XXXXXXXXXXX
+```
+heroku config:add GITHUB_ID=XXXXXXXXXXX
+heroku config:add GITHUB_SECRET=XXXXXXXXXXX
+```
+
+If you run locally, you will also need a redis server
+```
+redis-server
+```
+
+In another window, type 
+```
+QUEUE=recommendable rake environment resque:work
+```
+
+This uses the awesome recommendable gem [located here](https://github.com/davidcelis/recommendable).
