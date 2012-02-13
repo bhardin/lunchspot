@@ -2,12 +2,10 @@
 <table class="table table-striped">
   <tr>
 		<th>Like</th>
+		<th>Dislike</th>
     <th>Name</th>
     <th>Address</th>
-    <th>Phone</th>
-		<th></th>
-		<th></th>
-		<th></th>
+    <th>Menu</th>
   </tr>
   <% for restaurant in @restaurants %>
     <tr>
@@ -21,12 +19,15 @@
 				<i class="icon-ban-circle"></i> Hate
 			<% end %>
 			</td>
-      <td><%= restaurant.name %></td>
+      <td><%= link_to restaurant.name, restaurant %></td>
       <td><%= restaurant.address %></td>
-      <td><%= restaurant.phone %></td>
-      <td><%= link_to "Show", restaurant %></td>
-      <td><%= link_to "Edit", edit_restaurant_path(restaurant) %></td>
-      <td><%= link_to "Destroy", restaurant, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td>
+				<% if restaurant.menu_link.empty? %>
+					No Menu
+				<% else %>
+					<%= link_to "Menu", restaurant.menu_link %>					
+				<% end %>
+			</td>
     </tr>
   <% end %>
 </table>
