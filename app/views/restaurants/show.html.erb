@@ -13,11 +13,25 @@
 </p>
 
 <p>
-	<%= link_to "?rating=like", :remote => true, :class => 'btn'  do%>
-		<i class="icon-heart"></i> Like
+	
+	<% if current_user.likes? @restaurant %>
+		<%= link_to "?rating=like", :remote => true, :class => 'btn btn-primary'  do%>
+			<i class="icon-heart icon-white"></i> Like	
+		<% end %>
+	<% else %>
+		<%= link_to "?rating=like", :remote => true, :class => 'btn'  do%>
+			<i class="icon-heart"></i> Like	
+		<% end %>
 	<% end %>
-	<%= link_to "?rating=dislike", :remote => true, :class => "btn" do %>
-		<i class="icon-ban-circle"></i> Hate
+	
+	<% if current_user.dislikes? @restaurant %>
+		<%= link_to "?rating=dislike", :remote => true, :class => 'btn btn-danger'  do%>
+			<i class="icon-ban-circle icon-white"></i> dislike	
+		<% end %>
+	<% else %>
+		<%= link_to "?rating=dislike", :remote => true, :class => 'btn'  do%>
+			<i class="icon-ban-circle"></i> dislike	
+		<% end %>
 	<% end %>
 </p>
 
