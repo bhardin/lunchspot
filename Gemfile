@@ -1,14 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'sqlite3'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'less-rails-bootstrap'
 gem "recommendable"
 
 group :development do
+	gem 'sqlite3'
 	gem 'nifty-generators'
+end
+
+group :production do
+	gem 'pg'
 end
 
 
