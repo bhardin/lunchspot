@@ -37,3 +37,5 @@ QUEUE=recommendable rake environment resque:work
 ```
 
 This uses the awesome recommendable gem [located here](https://github.com/davidcelis/recommendable).
+
+heroku config:add REDISTOGO_URL='redis://username:password@my.host:6789'
