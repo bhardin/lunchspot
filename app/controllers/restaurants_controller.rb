@@ -5,6 +5,12 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    
+    if params[:rating] == "like"
+      current_user.like @restaurant
+    elsif params[:rating] == "dislike"
+      current_user.dislike @restaurant
+    end
   end
 
   def new

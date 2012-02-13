@@ -13,10 +13,10 @@
 </p>
 
 <p>
-	<%= link_to "#", :class => 'btn' do%>
+	<%= link_to "?rating=like", :remote => true, :class => 'btn'  do%>
 		<i class="icon-heart"></i> Like
 	<% end %>
-	<%= link_to "#", :class => "btn" do %>
+	<%= link_to "?rating=dislike", :remote => true, :class => "btn" do %>
 		<i class="icon-ban-circle"></i> Hate
 	<% end %>
 </p>
