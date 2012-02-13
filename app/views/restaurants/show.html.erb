@@ -12,6 +12,10 @@
   <strong>Phone:</strong>
   <%= @restaurant.phone %>
 </p>
+<p>
+  <strong>Menu:</strong>
+  <%= link_to "menu", @restaurant.menu_link %>
+</p>
 
 <p>
   <%= link_to "Edit", edit_restaurant_path(@restaurant) %> |
