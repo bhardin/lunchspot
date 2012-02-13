@@ -177,7 +177,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg
-  rails (= 3.2.0)
+  rails (~> 3.2.0)
   recommendable
   sass-rails (~> 3.2.3)
   sqlite3
