@@ -21,7 +21,7 @@
 								</form>
 							</ul>
 							<ul class="nav pull-right">
-								<li><a href="#">Sign-In</a></li>
+								<li><%= link_to "Sign in with Github" , "auth/github" %></li>
 							</ul>
 						</div>
 				</div>
@@ -29,9 +29,7 @@
 		</div>
 		
     <div class="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
+      <%= render :partial => 'common/flashes' %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
