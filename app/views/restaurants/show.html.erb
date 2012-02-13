@@ -13,8 +13,19 @@
 </p>
 
 <p>
-	
-  <%= link_to "Edit", edit_restaurant_path(@restaurant), :class => 'btn' %>
+	<%= link_to "#", :class => 'btn' do%>
+		<i class="icon-heart"></i> Like
+	<% end %>
+	<%= link_to "#", :class => "btn" do %>
+		<i class="icon-ban-circle"></i> Hate
+	<% end %>
+</p>
+
+<p>	
+  <%= link_to edit_restaurant_path(@restaurant), :class => 'btn' do %>
+		<i class="icon-pencil"></i> Edit
+	<% end %>
+
   <%= link_to "Destroy", @restaurant, :confirm => 'Are you sure?', :method => :delete, :class => 'btn' %>
   <%= link_to "View All", restaurants_path, :class => 'btn' %>
 </p>

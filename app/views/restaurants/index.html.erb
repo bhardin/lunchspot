@@ -11,7 +11,11 @@
   </tr>
   <% for restaurant in @restaurants %>
     <tr>
-	    <td><%= link_to "like", restaurant.like %></td>
+			<% if current_user.likes? restaurant %>	
+				<td>True</td>
+			<% else %>
+				<td>False</td>
+			<% end %>
       <td><%= restaurant.name %></td>
       <td><%= restaurant.address %></td>
       <td><%= restaurant.phone %></td>
@@ -23,3 +27,11 @@
 </table>
 
 <p><%= link_to "New Restaurant", new_restaurant_path %></p>
+
+<h3>Recommendations</h3>
+<% for recommendation in current_user.recommendations %>
+<%= recommendation.name %>
+<% end %>
+
+
+
