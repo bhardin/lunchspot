@@ -8,8 +8,10 @@ class RestaurantsController < ApplicationController
     
     if params[:rating] == "like"
       current_user.like @restaurant
+      redirect_to :back
     elsif params[:rating] == "dislike"
       current_user.dislike @restaurant
+      redirect_to :back
     end
   end
 
