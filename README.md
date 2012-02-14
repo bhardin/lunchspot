@@ -17,7 +17,7 @@ heroku config:add GITHUB_SECRET=XXXXXXXXXXX
 heroku config:add REDISTOGO_URL='redis://username:password@my.host:6789'
 ```
 
-* Start Eating and Rating! 
+* Start Eating, Enjoying, and Rating! 
 
 ## Contribute
 
