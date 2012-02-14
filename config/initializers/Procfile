@@ -1,0 +1,1 @@
+worker: QUEUE=recommendable bundle exec rake resque:work
