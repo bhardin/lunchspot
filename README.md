@@ -14,7 +14,7 @@ By default uses github for authentication. You can easily add twitter, facebook,
 ```
 heroku config:add GITHUB_ID=XXXXXXXXXXX
 heroku config:add GITHUB_SECRET=XXXXXXXXXXX
-heroku config:add REDISTOGO_URL='redis://username:password@my.host:6789'
+heroku config:add REDIS_URL='redis://username:password@my.host:6789'
 ```
 
 * Start Eating, Enjoying, and Rating! 
