@@ -4,7 +4,8 @@ gem 'rails', '3.2.0'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'less-rails-bootstrap'
-gem 'recommendable', "~> 0.1.5"
+#gem 'recommendable', "~> 0.1.5"
+gem "recommendable", :git => "git://github.com/davidcelis/recommendable.git"
 gem 'redis'
 gem 'jquery-rails'
 
