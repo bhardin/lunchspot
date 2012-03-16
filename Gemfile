@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sourceninja-ruby', :git => 'https://github.com/SourceNinja/sourceninja-ruby'
+gem 'sourceninja'
 gem 'rails', '3.2.0'
 gem 'omniauth'
 gem 'omniauth-github'
