@@ -37,7 +37,7 @@
 
 			</td>
       <td><%= link_to restaurant.name, restaurant %></td>
-      <td><%= restaurant.address %></td>
+      <td><%= link_to restaurant.address, "http://maps.google.com/?q=" + restaurant.address %></td>
       <td>
 				<% if restaurant.menu_link.empty? %>
 					No Menu
