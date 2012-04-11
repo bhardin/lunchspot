@@ -16,6 +16,8 @@
 
 # IDE files
 *.tmproj
+*.sublime-project
+*.sublime-workspace
 
 # Secret Files
 /config/initializers/SECRETS.rb
