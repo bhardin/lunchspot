@@ -1,0 +1,1 @@
+worker: QUEUE=recommendable rake resque:work

@@ -14,18 +14,18 @@ By default uses github for authentication. You can easily add twitter, facebook,
 ```
 heroku config:add GITHUB_ID=XXXXXXXXXXX
 heroku config:add GITHUB_SECRET=XXXXXXXXXXX
-heroku config:add REDISTOGO_URL='redis://username:password@my.host:6789'
+heroku config:add REDIS_URL='redis://username:password@my.host:6789'
 ```
 
-* Start Eating and Rating! 
+* Start Eating, Enjoying, and Rating! 
 
-## To Contribute
+## Contribute
 
-1. Fork Project.
-2. Change Code.
-3. Write unit tests.
-4. Make Sure all unit tests pass.
-5. Send Pull Request.
+1. Fork project
+2. Create a feature branch
+3. Write your code (and tests please)
+4. Push to your branch's origin
+5. Create a Pull Request from your branch
 
 ## Running Local
 
