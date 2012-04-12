@@ -21,3 +21,4 @@
 
 # Secret Files
 /config/initializers/SECRETS.rb
+config/database.yml
