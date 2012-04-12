@@ -8,6 +8,7 @@ gem 'less-rails-bootstrap'
 #gem 'recommendable', "~> 0.1.5"
 gem "recommendable", :git => "git://github.com/davidcelis/recommendable.git"
 gem 'redis'
+gem 'resque'
 gem 'jquery-rails'
 
 group :development, :test do
