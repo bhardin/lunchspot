@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def check_host
 	  if request.host.split('.')[0] == 'www'
-	    redirect_to "http://" + request.host.gsub('www.','')
+	    redirect_to "http://" + request.host.gsub('','www.')
     end
   end
 
