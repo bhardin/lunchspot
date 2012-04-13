@@ -1,6 +1,15 @@
 <% if current_user %>
 
-<% title "Restaurants" %>
+<h1>Personalized Picks</h1>
+<% for recommendation in current_user.recommendations %>
+<h2><%= link_to recommendation.name, recommendation %><br/></h2>
+<% end %>
+<br/><br/>
+
+<%= link_to "Random ME", random_path, :class => 'btn' %>
+
+
+<h2>Restaurants</h2>
 <table class="table table-striped">
   <tr>
 		<th>Like</th>
@@ -49,27 +58,7 @@
   <% end %>
 </table>
 
-<p><%= link_to "New Restaurant", new_restaurant_path %></p>
-
-<h3>Recommendations</h3>
-<% for recommendation in current_user.recommendations %>
-<%= recommendation.name %><br/>
-<% end %>
-
-<%= link_to "Random ME", random_path, :class => 'btn' %>
-
-
-<br/><br/>
-<h2>Debug</h2>
-<h3>Likes</h3>
-<% for recommendation in current_user.liked %>
-<%= recommendation.name %><br/>
-<% end %>
-
-<h3>Dislikes</h3>
-<% for recommendation in current_user.disliked %>
-<%= recommendation.name %><br/>
-<% end %>
+<p><%= link_to "Add Restaurant", new_restaurant_path, :class => 'btn' %></p>
 
 <% else %>
 Please log in.
