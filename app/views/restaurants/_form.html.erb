@@ -1,19 +1,20 @@
 <%= form_for @restaurant do |f| %>
   <%= f.error_messages %>
+  
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :address %><br />
+    <%= f.label :address %>
     <%= f.text_field :address %>
   </p>
   <p>
-    <%= f.label :phone %><br />
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </p>
   <p>
-    <%= f.label :menu %><br />
+    <%= f.label :menu %>
     <%= f.text_field :menu_link %>
   </p>
   <p><%= f.submit %></p>
