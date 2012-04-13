@@ -3,6 +3,7 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "The Best Restaurant Food" %></title>
     <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :application %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
@@ -19,15 +20,23 @@
 								  <input type="text" class="search-query" placeholder="Search is currently broken">
 								</form>
 							</ul>
+
 							<ul class="nav pull-right">
 								<% if current_user %>
 								<li><%= link_to current_user.name, "#" %></li>
 								<li class="divider-vertical"></li>
 								<li><%= link_to "Sign Out", signout_path %></li>
 								<% else %>
-								<li><%= link_to "Sign in with Github" , "auth/github" %></li>
+								<li class="dropdown">
+							    <a class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
+							    <ul class="dropdown-menu">
+							      <li><%= link_to "Sign in with Github" , "auth/github" %></li>
+							      <li><%= link_to "Sign in with Facebook" , "auth/facebook" %></li>
+							    </ul>
+							  </li>
 								<% end %>
 							</ul>
+
 						</div>
 				</div>
 			</div>
