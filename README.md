@@ -1,3 +1,5 @@
+![status](http://app.sourceninja.com/status/4d0ff012-bb0c-4a95-b487-5ad9a23051a5.png)
+
 # lunchspot
 
 An app for rating restaurants that you and your coworkers frequent. A local or corporate yelp? I built this specifically for [SourceNinja](http://sourceninja.com) for us to identify the best burrito places close to us.
