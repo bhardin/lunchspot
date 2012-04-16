@@ -8,8 +8,10 @@
   <%= @restaurant.phone %>
 </p>
 <p>
+	<% if not @restaurant.menu_link.empty? %>
   <strong>Menu:</strong>
-  <%= link_to "menu", @restaurant.menu_link %>
+  <%= link_to "View Menu", @restaurant.menu_link %>
+  <% end %>
 </p>
 
 <p>
