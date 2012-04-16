@@ -1,4 +1,4 @@
-![status](http://app.sourceninja.com/status/4d0ff012-bb0c-4a95-b487-5ad9a23051a5.png)
+![status](https://app.sourceninja.com/status/4d0ff012-bb0c-4a95-b487-5ad9a23051a5.png)
 
 # lunchspot
 
