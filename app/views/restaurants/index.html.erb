@@ -1,8 +1,10 @@
 <% if current_user %>
 
 <h1>Personalized Picks</h1>
-<% for recommendation in current_user.recommendations %>
+<% for recommendation in @recommendations %>
 <h2><%= link_to recommendation.name, recommendation %><br/></h2>
+<%= link_to restaurant_path(recommendation) + "?rating=like", :class => 'btn'  do%><i class="icon-heart"></i> Like<% end %>
+<%= link_to restaurant_path(recommendation) + "?rating=dislike", :class => 'btn'  do%><i class="icon-ban-circle"></i> dislike<% end %>
 <% end %>
 <br/><br/>
 

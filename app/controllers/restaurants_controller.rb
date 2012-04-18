@@ -1,6 +1,9 @@
 class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
+    if current_user
+      @recommendations = current_user.recommendations
+    end
   end
 
   def show
