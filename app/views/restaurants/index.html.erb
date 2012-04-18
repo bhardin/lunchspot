@@ -3,9 +3,11 @@
 <h1>Personalized Picks</h1>
 <% for recommendation in @recommendations %>
 <div class="rec">
-	<%= link_to restaurant_path(recommendation) + "?rating=like", :class => 'btn left'  do%><i class="icon-heart"></i> Like<% end %>
-	<%= link_to restaurant_path(recommendation) + "?rating=dislike", :class => 'btn left'  do%><i class="icon-ban-circle"></i> dislike<% end %>
-	<h2><%= link_to recommendation.name, recommendation %></h2>
+	<h2>
+		<%= link_to restaurant_path(recommendation) + "?rating=like", :class => 'btn'  do%><i class="icon-heart"></i> Like<% end %>
+		<%= link_to restaurant_path(recommendation) + "?rating=dislike", :class => 'btn'  do%><i class="icon-ban-circle"></i> dislike<% end %>
+		<%= link_to recommendation.name, recommendation %>
+	</h2>
 </div>
 <% end %>
 <br/><br/>
