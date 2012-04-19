@@ -1,5 +1,6 @@
 <% if current_user %>
 
+<% if @recommendations %>
 <h1>Personalized Picks</h1>
 <% for recommendation in @recommendations %>
 <div class="rec">
@@ -11,9 +12,7 @@
 </div>
 <% end %>
 <br/><br/>
-
-<%= link_to "Random ME", random_path, :class => 'btn' %>
-
+<% end %>
 
 <h2>Restaurants</h2>
 <table class="table table-striped">

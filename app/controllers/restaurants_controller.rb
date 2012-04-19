@@ -1,8 +1,12 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
-    if current_user
-      @recommendations = current_user.recommendations
+    if params[:search].present?
+      @restaurants = Restaurant.near(params[:search], 50, :order => :distance)
+    else
+      @restaurants = Restaurant.all
+      if current_user
+        @recommendations = current_user.recommendations
+      end
     end
   end
 
