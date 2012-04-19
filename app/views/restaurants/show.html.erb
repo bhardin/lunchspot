@@ -45,3 +45,15 @@
   <%= link_to "Destroy", @restaurant, :confirm => 'Are you sure?', :method => :delete, :class => 'btn' %>
   <%= link_to "View All", restaurants_path, :class => 'btn' %>
 </p>
+
+
+<h2>Restaruants Close By</h2>
+<ul>
+<% for restaurant in @restaurant.nearbys(3) %>
+	<li><%= link_to restaurant.name, restaurant %> (<%= restaurant.distance.round(1) %> miles)</li>
+<% end %>
+</ul>
+
+
+
+

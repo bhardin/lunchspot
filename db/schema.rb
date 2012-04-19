@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120218101641) do
+ActiveRecord::Schema.define(:version => 20120419002147) do
 
   create_table "recommendable_dislikes", :force => true do |t|
     t.integer  "user_id"
@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(:version => 20120218101641) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "menu_link"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", :force => true do |t|

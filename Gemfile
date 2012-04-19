@@ -10,6 +10,7 @@ gem "recommendable", :git => "git://github.com/davidcelis/recommendable.git"
 gem 'redis'
 gem 'resque'
 gem 'jquery-rails'
+gem 'geocoder'
 
 group :development, :test do
 	gem 'sqlite3'
