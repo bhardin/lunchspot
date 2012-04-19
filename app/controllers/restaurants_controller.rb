@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
     if params[:search].present?
       @restaurants = Restaurant.near(params[:search], 50, :order => :distance)
     else
-      @restaurants = Restaurant.near(request.remote_ip)
+      @restaurants = Restaurant.near(current_location, 20, :order => :distance)
       if current_user
         @recommendations = current_user.recommendations
       end

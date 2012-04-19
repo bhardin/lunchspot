@@ -21,6 +21,7 @@
 		<th>Dislike</th>
     <th>Name</th>
     <th>Address</th>
+    <th>Distance</th>
     <th>Menu</th>
   </tr>
   <% for restaurant in @restaurants %>
@@ -52,6 +53,7 @@
 			</td>
       <td><%= link_to restaurant.name, restaurant %></td>
       <td><%= restaurant.address %></td>
+      <td><%= restaurant.distance.round(2) %> miles</td>
       <td>
 				<% if restaurant.menu_link.empty? %>
 					No Menu
