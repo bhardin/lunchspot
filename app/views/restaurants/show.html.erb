@@ -46,8 +46,10 @@
   <%= link_to "View All", restaurants_path, :class => 'btn' %>
 </p>
 
+<h3>Map</h3>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@restaurant.latitude}%2C#{@restaurant.longitude}" %>
 
-<h2>Restaruants Close By</h2>
+<h3>Restaruants Close By</h3>
 <ul>
 <% for restaurant in @restaurant.nearbys(3) %>
 	<li><%= link_to restaurant.name, restaurant %> (<%= restaurant.distance.round(1) %> miles)</li>
